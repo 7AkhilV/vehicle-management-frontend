@@ -341,8 +341,12 @@ const VehicleManagement = () => {
                       fontSize: '0.875rem'
                     }}>
                       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.25rem' }}>
-                        <span style={{ fontWeight: '500' }}>User ID:</span>
-                        <span style={{ fontFamily: 'monospace', fontSize: '0.75rem' }}>{assignment.userId}</span>
+                        <span style={{ fontWeight: '500' }}>User:</span>
+                        <span>{assignment.userId?.name || 'N/A'}</span>
+                      </div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.25rem' }}>
+                        <span style={{ fontWeight: '500' }}>Email:</span>
+                        <span style={{ fontSize: '0.75rem' }}>{assignment.userId?.email || 'N/A'}</span>
                       </div>
                       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.25rem' }}>
                         <span style={{ fontWeight: '500' }}>Assigned:</span>
